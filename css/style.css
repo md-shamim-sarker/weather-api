@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('../image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+#city-name {
+    font-size: 5em;
+    color: #1d1b1b;
+    font-family: 'Anton', sans-serif;
+}
+
+#city-temperature {
+    font-size: 2em;
+    color: #1d1b1b;
+    font-family: 'Anton', sans-serif;
+}
+
+.input-width {
+    width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+    .input-width {
+        width: 100%;
+    }
+}
