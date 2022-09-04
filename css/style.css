@@ -6,6 +6,7 @@ body {
     background: url('../image/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    color: #ECE3E8;
 }
 
 main {
@@ -15,13 +16,11 @@ main {
 
 #city-name {
     font-size: 5em;
-    color: #1d1b1b;
     font-family: 'Anton', sans-serif;
 }
 
 #city-temperature {
     font-size: 2em;
-    color: #1d1b1b;
     font-family: 'Anton', sans-serif;
 }
 
