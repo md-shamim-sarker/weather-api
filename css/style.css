@@ -6,7 +6,7 @@ body {
     background: url('../image/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ECE3E8;
+    color: black;
 }
 
 main {
@@ -15,7 +15,7 @@ main {
 }
 
 #city-name {
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Anton', sans-serif;
 }
 
@@ -25,7 +25,7 @@ main {
 }
 
 .input-width {
-    width: 25%;
+    width: 40%;
 }
 
 @media screen and (max-width: 768px) {
