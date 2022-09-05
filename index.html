@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <main class="d-flex flex-column justify-content-center align-items-center">
+<body class="overflow-hidden">
+    <main class="d-flex flex-column align-items-center mt-5">
         <div class="input-width input-group mb-3 px-4">
             <input id="input-city-name" type="text" class="form-control" placeholder="Enter City Name"
                 aria-label="Enter City Name" aria-describedby="btn-submit">
@@ -20,6 +20,9 @@
         </div>
         <div id="spinner" class="d-none text-center">
             <img src="./image/spinner.gif" alt="spinner" class="w-50">
+        </div>
+        <div id="error-message" class="d-none text-center text-warning">
+            <h2>No Data Found....</h2>
         </div>
         <div id="weather-info" class="text-center">
         </div>

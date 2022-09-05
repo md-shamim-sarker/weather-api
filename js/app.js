@@ -4,13 +4,15 @@ const loadData = cityName => {
         .then(res => res.json())
         .then(data => display(data))
         .catch(err => {
+            toggleSpinner(false);
             console.log(err);
-            document.getElementById('city-name').innerText = 'No Data Found';
-            document.getElementById('weather-information').classList.add('invisible');
+            document.getElementById('error-message').classList.remove('d-none');
+            document.getElementById('input-city-name').value = '';
         });
 };
 
 const display = data => {
+    document.getElementById('error-message').classList.add('d-none');
     const infoContainer = document.getElementById('weather-info');
     infoContainer.innerHTML = `
         <h2 id="city-name">${data.name}</h2>
@@ -21,10 +23,13 @@ const display = data => {
         </div>
     `;
     document.getElementById('input-city-name').value = '';
+    toggleSpinner(false);
 };
 
 document.getElementById('btn-submit').addEventListener('click', () => {
     const inputCityName = document.getElementById('input-city-name').value;
+    document.getElementById('error-message').classList.add('d-none');
+    toggleSpinner(true);
     document.getElementById('weather-info').innerHTML = "";
     loadData(inputCityName);
 });
@@ -32,6 +37,8 @@ document.getElementById('btn-submit').addEventListener('click', () => {
 document.getElementById('input-city-name').addEventListener('keypress', (event) => {
     if(event.key === 'Enter') {
         const inputCityName = document.getElementById('input-city-name').value;
+        document.getElementById('error-message').classList.add('d-none');
+        toggleSpinner(true);
         document.getElementById('weather-info').innerHTML = "";
         loadData(inputCityName);
     };
